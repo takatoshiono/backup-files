@@ -4,6 +4,12 @@ describe FileTransporter::S3 do
   describe '#transport' do
   end
 
+  describe '#bucket' do
+    it 'returns a instance of AWS::S3::Bucket' do
+      expect(FileTransporter::S3.bucket).to be_instance_of AWS::S3::Bucket
+    end
+  end
+
   describe '#object_key_name' do
     context 'when file path end with *.mov' do
       context 'file name includes year(YYYY)' do
