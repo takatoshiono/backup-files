@@ -14,8 +14,8 @@ describe FileTransporter::S3 do
     context 'when file path end with *.mov' do
       context 'file name includes year(YYYY)' do
         let(:file_path) { '/Users/takatoshi/Movies/iMovie Events.localized/2014-02-27/clip-2014-02-27 18;22;02.mov' }
-        it 'returns like /videos/YYYY/file_name.mov' do
-          expect(FileTransporter::S3.object_key_name(file_path)).to match "/videos/2014/#{File.basename(file_path)}"
+        it 'returns like videos/YYYY/file_name.mov' do
+          expect(FileTransporter::S3.object_key_name(file_path)).to match "videos/2014/#{File.basename(file_path)}"
         end
       end
 
