@@ -2,5 +2,7 @@
 source "https://rubygems.org"
 
 gem 'aws-sdk'
-gem 'rspec'
 gem 'dotenv'
+gem 'rspec'
+gem 'vcr'
+gem 'webmock'
