@@ -16,7 +16,7 @@ namespace :backup do
       exit
     end
 
-    Dir.glob("#{File.absolute_path(dir)}/*.mov") do |file_path|
+    Dir.glob("#{File.expand_path(dir)}/*.mov") do |file_path|
       puts file_path
       FileTransporter::S3.transport(file_path)
     end
