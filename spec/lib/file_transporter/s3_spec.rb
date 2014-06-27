@@ -23,6 +23,7 @@ describe FileTransporter::S3 do
     let(:content) { File.read(file_path) }
 
     it 'uploads a file to Amazon S3' do
+      skip 'bacause host is not a localhost' if `hostname`.strip.match /\.local$/
       FileTransporter::S3.transport(file_path)
       object_key_name = FileTransporter::S3.object_key_name(file_path)
       expect(FileTransporter::S3.bucket.objects[object_key_name].read).to eq content
