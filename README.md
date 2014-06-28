@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/takatoshiono/backup-files.svg?branch=master)](https://travis-ci.org/takatoshiono/backup-files)
+
 # Backup my own files
 
 We want to easily backup files to outside our computers.
